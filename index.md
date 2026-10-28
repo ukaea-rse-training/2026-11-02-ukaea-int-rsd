@@ -9,14 +9,14 @@ country: "GB"      # lowercase two-letter ISO country code such as "fr" (see htt
 language: "English"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: 51.65713      # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: -1.23002     # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "2, 3, 9, 10, 18, 19 June 2025"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "13:00 - 16:30 GMT (UTC+0)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: 2025-06-02      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2025-06-19
-instructor: ["Matthew Bluteau", "Kirill Palamartchouk", "Kristian Zarebski", "Matthew Field", "Harry Saunders", "Kingsley Collie"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Sanket Gadgil"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["matthew.bluteau@ukaea.uk"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes: "https://codimd.carpentries.org/ukaea-int-rsd-20250602#" # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+humandate: "2, 3, 9, 10, 18, 19 November 2026"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "13:00 - 16:30 GMT (UTC+1)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+startdate: 2026-11-02      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2026-11-19
+instructor: ["Harry Saunders", "Kirill Palamartchouk", "James Panayis", "Kingsley Collie", "Kristian Zarabski"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: []     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["harry.saunders@ukaea.uk"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+collaborative_notes: "https://codimd.carpentries.org/1Y7DCvYGQHGGoKaN_UGiZA" # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -315,24 +315,11 @@ for instructions to follow to obtain the software and data you will need to foll
 For Windows users, please see the note immediately below.
 We recommend that you use your work laptop for the course and run the software required directly on that.
 
-We appreciate that some participants will work on Linux clusters on a regular basis
-(e.g. freia, heimdall, cumulus) and will therefore want to do the course work from there.
-Whilst this is possible,
-the Python installation on these clusters is not in a suitable state for the course.
-We have frequently run into problems trying to complete the course content in these environments.
-**Therefore, we strongly discourage you from using one of these clusters at this time.**
-If you still wilfully choose to work on a cluster, please be aware our support for you will be
-limited.[^1]
-
-[^1]: There is ongoing work to improve the Python installation on UKAEA clusters,
-      so we hope it will soon be possible to offer this as a viable option again.
-
 >## Some notes for UKAEA Windows users
 >
-> It has been our experience that installing GitBash as recommended in the
-> course setup is not a workable option. Instead, learners have had much less
-> trouble if they use WSL (Windows Subsytem for Linux) and connect the VS Code
-> IDE to that. We therefore recommend the following setup steps:
+> It has been our experience that earners have had much less trouble 
+> if they use WSL (Windows Subsytem for Linux) and connect 
+> the VS Code IDE to that. We therefore recommend the following setup steps:
 >
 > 1. Follow [the instructions to install
 >    WSL2](https://intranet.ukaea.uk/software/guides/wsl2.html) on your UKAEA
@@ -348,9 +335,9 @@ limited.[^1]
 >    within WSL and launch it from there (update the PyCharm version data as neeed):
 >
 >    ```bash
->    wget https://download.jetbrains.com/python/pycharm-community-2024.1.1.tar.gz
+>    wget https://download.jetbrains.com/python/pycharm-2026.2.3.tar.gz
 >    sudo tar xzf pycharm-*.tar.gz -C /opt/
->    alias pycharm=/opt/pycharm-community-2024.1.1/bin/pycharm.sh  # Put this into .bashrc
+>    alias pycharm=/opt/pycharm-community-2026.2.3/bin/pycharm.sh  # Put this into .bashrc
 >    pycharm
 >    ```
 >
@@ -367,7 +354,7 @@ limited.[^1]
 > If the above fails, you can fall back to the option of using GitBash and a
 > local Python installation:
 >
-> - Git for Windows can be installed using the Software Center/Application Catalog.
+> - Git for Windows can be installed using the Windows Store.
 > - You can download and run a standard Python installer from
 >   <https://www.python.org/downloads/windows/>, but should ensure that the
 >   option to install for all users is not selected (to avoid the need for admin
@@ -386,10 +373,7 @@ limited.[^1]
 > There are two Integrated Development Environments (IDEs) that are supported
 > for this course, and we recommend that you use one of them:
 >
-> 1. JetBrains' PyCharm: this is the one recommended in the course setup pages,
->    and it is the IDE used throughout the examples in the course content. All
->    figures and instructions relate to it.
-> 2. Microsoft's VSCode: a widely used IDE and likely the most popular at UKAEA.
+> 1. Microsoft's VSCode: a widely used IDE and likely the most popular at UKAEA.
 >    Instructions for getting set up with it have recently been added to the
 >    ["Extras" of the
 >    course](https://carpentries-incubator.github.io/python-intermediate-development/vscode/index.html).
@@ -397,12 +381,15 @@ limited.[^1]
 >    you can use that document to get the analogous features in VSCode. This
 >    will of course require switching between between webpages, so the
 >    experience will not be as seamless. A better UX is in our long term plans.
+> 2. JetBrains' PyCharm: this is the one recommended in the course setup pages,
+>    and it is the IDE used throughout the examples in the course content. All
+>    figures and instructions relate to it.
 >
 > However, because this is an intermediate-level course,
 > we expect that a number of participants will already have some experience using an IDE or comparable advanced code editor
 > (e.g. Vim, Emacs).
 > Therefore, you are welcome to use your editor of choice for the course
-> if you are confident that you can achieve similar functionality that is described for PyCharm:
+> if you are confident that you can achieve similar functionality that is described for VSCode:
 >
 > - Syntax highlighting, indentation, and autocompletion
 > - Recognition of virtual environments and setting the correct Python interpreter
