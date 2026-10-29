@@ -10,7 +10,7 @@ language: "English"     # lowercase two-letter ISO language code such as "fr" (s
 latitude: 51.65713      # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: -1.23002     # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "2, 3, 9, 10, 18, 19 November 2026"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "13:00 - 16:30 GMT (UTC+1)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+humantime: "13:00 - 16:30 GMT (UTC+0)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 startdate: 2026-11-02      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2026-11-19
 instructor: ["Harry Saunders", "Kirill Palamartchouk", "James Panayis", "Kingsley Collie", "Kristian Zarabski"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -317,8 +317,8 @@ We recommend that you use your work laptop for the course and run the software r
 
 >## Some notes for UKAEA Windows users
 >
-> It has been our experience that earners have had much less trouble 
-> if they use WSL (Windows Subsytem for Linux) and connect 
+> It has been our experience that earners have had much less trouble
+> if they use WSL (Windows Subsytem for Linux) and connect
 > the VS Code IDE to that. We therefore recommend the following setup steps:
 >
 > 1. Follow [the instructions to install
